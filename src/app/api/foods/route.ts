@@ -194,9 +194,8 @@ export async function GET(request: Request) {
       food.category.toLowerCase() === category.toLowerCase()
     );
   }
-
   // Filter by search term if provided
-  if (search) {
+  if (search ) {
     filteredFoods = filteredFoods.filter(food =>
       food.name.toLowerCase().includes(search.toLowerCase())
     );

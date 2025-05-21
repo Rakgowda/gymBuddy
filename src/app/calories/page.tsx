@@ -23,7 +23,7 @@ export default function CaloriePage() {
     const fetchFoods = async () => {
       try {
         // add category to the url
-        const response = await fetch(`/api/foods${category ? `?search=${searchTerm}&category=${category}` : ''}`);
+        const response = await fetch(`/api/foods${!category ? !searchTerm ? '' : `?search=${searchTerm}` : `?category=${category}`}`);
         if (!response.ok) {
           throw new Error('Failed to fetch food items');
         }
@@ -37,9 +37,14 @@ export default function CaloriePage() {
     };
 
     fetchFoods();
-  }, [searchTerm, category]);
+  }, [ category]);
 
   const categories = Array.from(new Set(foodItems.map(item => item.category)));
+
+//  on input change, filter the food items by name in local =filter
+const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(e.target.value);
+}
 
   if (loading) {
     return (
@@ -80,7 +85,7 @@ export default function CaloriePage() {
             placeholder="Search for food items..."
             className="w-full p-4 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            onChange={onInputChange}
           />
         </div>
 
@@ -106,7 +111,7 @@ export default function CaloriePage() {
 
         {/* Food Items Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {foodItems.map((food) => (
+          {foodItems.filter(food => food.name.toLowerCase().includes(searchTerm.toLowerCase())).map((food) => (
             <div
               key={food.id}
               className="bg-gray-800 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300"
