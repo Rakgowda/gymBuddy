@@ -178,6 +178,143 @@ const foodItems: FoodItem[] = [
     carbs: 42.1,
     fat: 30.7,
     category: "Seeds"
+  },
+  // Indian Meals & Snacks
+  {
+    id: 19,
+    name: "Masala Dosa (1 medium)",
+    calories: 168,
+    protein: 4,
+    carbs: 30,
+    fat: 4.5,
+    category: "Breakfast"
+  },
+  {
+    id: 20,
+    name: "Idli (2 pieces)",
+    calories: 120,
+    protein: 4,
+    carbs: 23,
+    fat: 1,
+    category: "Breakfast"
+  },
+  {
+    id: 21,
+    name: "Poha (1 cup)",
+    calories: 250,
+    protein: 6,
+    carbs: 45,
+    fat: 6,
+    category: "Breakfast"
+  },
+  {
+    id: 22,
+    name: "Rajma Curry (1 cup)",
+    calories: 240,
+    protein: 12,
+    carbs: 34,
+    fat: 7,
+    category: "Indian Meals"
+  },
+  {
+    id: 23,
+    name: "Paneer Tikka (100g)",
+    calories: 190,
+    protein: 16,
+    carbs: 5,
+    fat: 11,
+    category: "Protein"
+  },
+  {
+    id: 24,
+    name: "Dal Tadka (1 cup)",
+    calories: 220,
+    protein: 14,
+    carbs: 28,
+    fat: 6,
+    category: "Indian Meals"
+  },
+  {
+    id: 25,
+    name: "Mixed Sprouts Chaat (1 bowl)",
+    calories: 150,
+    protein: 9,
+    carbs: 24,
+    fat: 3,
+    category: "Snacks"
+  },
+  {
+    id: 26,
+    name: "Cooked Basmati Rice (1 cup)",
+    calories: 130,
+    protein: 2.4,
+    carbs: 28,
+    fat: 0.3,
+    category: "Carbs"
+  },
+  {
+    id: 27,
+    name: "Whole Wheat Roti (1 medium)",
+    calories: 120,
+    protein: 4,
+    carbs: 18,
+    fat: 3,
+    category: "Carbs"
+  },
+  {
+    id: 28,
+    name: "Sambar (1 cup)",
+    calories: 150,
+    protein: 6,
+    carbs: 20,
+    fat: 5,
+    category: "Indian Meals"
+  },
+  // Indian Fruits
+  {
+    id: 29,
+    name: "Mango (100g)",
+    calories: 60,
+    protein: 0.8,
+    carbs: 15,
+    fat: 0.4,
+    category: "Fruits"
+  },
+  {
+    id: 30,
+    name: "Guava (100g)",
+    calories: 68,
+    protein: 2.6,
+    carbs: 14,
+    fat: 1,
+    category: "Fruits"
+  },
+  {
+    id: 31,
+    name: "Pomegranate (100g)",
+    calories: 83,
+    protein: 1.7,
+    carbs: 19,
+    fat: 1.2,
+    category: "Fruits"
+  },
+  {
+    id: 32,
+    name: "Papaya (100g)",
+    calories: 43,
+    protein: 0.5,
+    carbs: 11,
+    fat: 0.3,
+    category: "Fruits"
+  },
+  {
+    id: 33,
+    name: "Chikoo (100g)",
+    calories: 83,
+    protein: 0.4,
+    carbs: 20,
+    fat: 1.1,
+    category: "Fruits"
   }
 ];
 
