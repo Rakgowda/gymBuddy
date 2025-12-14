@@ -74,7 +74,7 @@ const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white p-8">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+        <h1 className="text-4xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text flex justify-center items-center flex-col">
           Calorie Tracker
         </h1>
 
@@ -115,6 +115,7 @@ const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
             <div
               key={food.id}
               className="bg-gray-800 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300"
+              style={{ fontFamily: 'Geist', backgroundColor: 'rgba(30, 41, 56, 1)' }}
             >
               <div className="flex justify-between items-start mb-4">
                 <h2 className="text-xl font-semibold">{food.name}</h2>
@@ -143,15 +144,6 @@ const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Add Food Button */}
-        <div className="fixed bottom-8 right-8">
-          <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-4 rounded-full shadow-lg hover:opacity-90 transition-opacity">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-            </svg>
-          </button>
         </div>
       </div>
     </main>
